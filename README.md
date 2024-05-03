@@ -2,6 +2,10 @@
 
 **Project description**
 
+This project aims to deploy individual containers easily and quickly for each student. They were originally designed for cybersecurity students. This allows them to have a laboratory available to work and learn basic commands.
+
+A terminal sharing feature is included. A teacher can connect to the student's container and see in real time what the student is doing. They can also type on their behalf to help them.
+
 ## Contents
 
 1. [Installation](#installation)
