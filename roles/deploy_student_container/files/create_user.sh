@@ -9,7 +9,7 @@ figlet -w 1000 Project Viper
 printf "${STOP}"
 printf "Created by: TheHackdes"
 echo -e "\n"
-alias shared='tmux -S /tmp/shareds attach -t shared'
+alias shared='tmux -S /tmp/shareds attach -t shared ; rm /tmp/shareds'
 EOF
 
 cat <<'EOF' >> /etc/ssh/sshd_config
