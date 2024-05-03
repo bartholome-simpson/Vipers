@@ -17,6 +17,7 @@
   docker_container:
     name: "stud_{{ item.name }}"
     image: student_image
+    hostname: attacker
     interactive: yes
     state: started
     restart_policy: always
