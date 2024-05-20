@@ -37,7 +37,6 @@ class Viper():
         config = container.attrs["Config"]["Cmd"]
         return config[0],config[1]
 
-
 if __name__ == "__main__":
     
     VIPER = Viper()
@@ -82,5 +81,3 @@ if __name__ == "__main__":
 
 console = Console()
 console.print(table)
-
-    

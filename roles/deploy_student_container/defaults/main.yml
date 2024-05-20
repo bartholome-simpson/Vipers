@@ -1,7 +1,25 @@
 ---
 # defaults file for deploy_student_container
 
+MY_NAME: "Firstname LASTNAME"
+
+SMTP_USERNAME: myemail@mail.com
+SMTP_PASSWORD: "mypassword"
+
+BODY: |
+  Bonjour {{ item.firstname }},
+
+  Voici vos identifiants de connexion personnels pour accéder à la machine virtuelle :
+    - Nom d'utilisateur : {{ item.name }}
+    - Mot de passe : {{ item.pass }}
+
+  Je vous recommande de ne rien partager avec qui que ce soit.
+  Si vous rencontrez des difficultés pour vous connecter, n'hésitez pas à me contacter directement à l'adresse suivante : {{ SMTP_USERNAME }}.
+  
+  Cordialement,
+  {{ MY_NAME }}
+
 STUDENT_USER:
-  - { name: user1, pass: Pa$$w0rd1 }
-  - { name: user2, pass: Pa$$w0rd2 }
-  - { name: user3, pass: Pa$$w0rd3 }
+  - { firstname: Anakin, lastname: SKYWALKER, name: user1, pass: Pa$$w0rd1, email: mail1@mail.ocm }
+  - { firstname: Jason, lastname: STATAM, name: user2, pass: Pa$$w0rd2, email: mail2@mail.ocm }
+  - { firstname: Napo, lastname: LEON, name: user3, pass: Pa$$w0rd3, email: mail3@mail.ocm }

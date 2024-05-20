@@ -15,9 +15,9 @@ A terminal sharing feature is included. A teacher can connect to the student's c
 
 ## Installation
 
-### Edit the student name
+### Configuration
 
-Add or edit the file : 
+Edit the file : 
 
 ```bash
 vim roles/deploy_student_container/defaults/main.yml
