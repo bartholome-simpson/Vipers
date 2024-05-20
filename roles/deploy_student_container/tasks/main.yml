@@ -23,8 +23,9 @@
     restart_policy: always
     command: "{{ item.name }} {{ item.pass }} /bin/bash"
     ports:
-      - "22"
+      - "{{ item.port }}:22"
   with_items: "{{ STUDENT_USER }}"
+
 
 - name: Sending an e-mail using Gmail SMTP servers
   community.general.mail:
@@ -34,7 +35,7 @@
     password: "{{ SMTP_PASSWORD }}"
     to:
       - "{{ item.email }}"
-    subject: Credential for Pentest VM
+    subject: "{{ OBJECT }}"
     body: "{{ BODY }}"
   delegate_to: localhost
   with_items: "{{ STUDENT_USER }}"

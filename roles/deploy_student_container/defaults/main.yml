@@ -3,8 +3,10 @@
 
 MY_NAME: "Firstname LASTNAME"
 
-SMTP_USERNAME: myemail@mail.com
-SMTP_PASSWORD: "mypassword"
+SMTP_USERNAME: mail@mail.com
+SMTP_PASSWORD: "strongpassword"
+
+OBJECT: "Credential for VM Pentest"
 
 BODY: |
   Bonjour {{ item.firstname }},
@@ -12,6 +14,7 @@ BODY: |
   Voici vos identifiants de connexion personnels pour accéder à la machine virtuelle :
     - Nom d'utilisateur : {{ item.name }}
     - Mot de passe : {{ item.pass }}
+    - Port SSH : {{ item.port }}
 
   Je vous recommande de ne rien partager avec qui que ce soit.
   Si vous rencontrez des difficultés pour vous connecter, n'hésitez pas à me contacter directement à l'adresse suivante : {{ SMTP_USERNAME }}.
@@ -20,6 +23,6 @@ BODY: |
   {{ MY_NAME }}
 
 STUDENT_USER:
-  - { firstname: Anakin, lastname: SKYWALKER, name: user1, pass: Pa$$w0rd1, email: mail1@mail.ocm }
-  - { firstname: Jason, lastname: STATAM, name: user2, pass: Pa$$w0rd2, email: mail2@mail.ocm }
-  - { firstname: Napo, lastname: LEON, name: user3, pass: Pa$$w0rd3, email: mail3@mail.ocm }
+  - { firstname: Anakin, lastname: SKYWALKER, name: user1, pass: Pa$$w0rd1, port: 9001, email: mail@mail.com }
+  - { firstname: Jason,  lastname: STATAM,    name: user2, pass: Pa$$w0rd2, port: 9002, email: mail@mail.com }
+  - { firstname: Napo,   lastname: LEON,      name: user3, pass: Pa$$w0rd3, port: 9003, email: mail@mail.com }
