@@ -15,6 +15,10 @@ A terminal sharing feature is included. A teacher can connect to the student's c
 
 ## Installation
 
+```bash
+git clone https://github.com/TheHackdes/0x02---Project-Viper
+```
+
 ### Configuration
 
 Edit the file : 
